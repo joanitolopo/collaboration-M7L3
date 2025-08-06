@@ -70,6 +70,8 @@ def test_password_contains_digit():
     Buat tes untuk memastikan password mengandung setidaknya satu digit (angka).
     Hint: Gunakan any(char.isdigit() for char in password).
     """
+    password = generate_password()
+    assert any(char.isdigit() for char in password)
     pass
 
 def test_password_contains_symbol():
@@ -77,4 +79,6 @@ def test_password_contains_symbol():
     Buat tes untuk memastikan password mengandung setidaknya satu simbol (karakter spesial).
     Hint: Gunakan any(char in string.punctuation for char in password).
     """
+    password = generate_password()
+    assert any(char in string.punctuation for char in password)
     pass
