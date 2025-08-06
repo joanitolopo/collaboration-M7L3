@@ -33,7 +33,9 @@ def test_password_is_not_empty_when_length_positive():
     Buat tes untuk memastikan password tidak kosong jika panjang lebih dari 0.
     Hint: Password seharusnya bukan string kosong jika length > 0.
     """
-    pass
+    password = "AISOFJHUaHUISD9u28233"
+    assert len(password) > 0
+    assert password != ""
 
 def test_password_is_empty_when_length_zero():
     """
