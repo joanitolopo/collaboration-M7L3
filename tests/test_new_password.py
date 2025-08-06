@@ -19,9 +19,6 @@ def test_password_length_matches_input():
     Buat tes untuk memastikan panjang password sesuai dengan input.
     Hint: Gunakan len(password) dan bandingkan dengan panjang yang diminta.
     """
-    password_length = 12
-    password = generate_password(password_length)
-    assert len(password) == password_length
     pass
 
 def test_passwords_are_random():
@@ -29,9 +26,6 @@ def test_passwords_are_random():
     Buat tes untuk memastikan dua password yang dibuat berturut-turut tidak sama.
     Hint: Panggil generate_password() dua kali, lalu bandingkan hasilnya.
     """
-    pass1 = generate_password(12)
-    pass2 = generate_password(12)
-    assert pass1 != pass2
     pass
 
 def test_password_is_not_empty_when_length_positive():
@@ -39,8 +33,6 @@ def test_password_is_not_empty_when_length_positive():
     Buat tes untuk memastikan password tidak kosong jika panjang lebih dari 0.
     Hint: Password seharusnya bukan string kosong jika length > 0.
     """
-    length12 = generate_password(12)
-    assert len(length12) == 12
     pass
 
 def test_password_is_empty_when_length_zero():
@@ -48,8 +40,6 @@ def test_password_is_empty_when_length_zero():
     Buat tes untuk memastikan jika panjang = 0, password yang dihasilkan adalah string kosong.
     Hint: Panggil generate_password(0) dan cek apakah hasilnya == "".
     """
-    length0 = generate_password(0)
-    assert len(length0) == 0
     pass
 
 def test_password_default_length_is_12():
@@ -57,7 +47,6 @@ def test_password_default_length_is_12():
     Buat tes untuk memastikan default panjang password adalah 12 jika tidak diberi argumen.
     Hint: Panggil generate_password() tanpa argumen, lalu cek panjang hasilnya.
     """
-    assert len(generate_password()) == 12
     pass
 
 def test_password_contains_uppercase_letter():
@@ -65,8 +54,6 @@ def test_password_contains_uppercase_letter():
     Buat tes untuk memastikan password mengandung setidaknya satu huruf kapital.
     Hint: Gunakan any(char.isupper() for char in password).
     """
-    password = generate_password()
-    assert any(char.isupper() for char in password)
     pass
 
 def test_password_contains_lowercase_letter():
@@ -74,8 +61,6 @@ def test_password_contains_lowercase_letter():
     Buat tes untuk memastikan password mengandung setidaknya satu huruf kecil.
     Hint: Gunakan any(char.islower() for char in password).
     """
-    password = generate_password()
-    assert any(char.islower() for char in password)
     pass
 
 def test_password_contains_digit():
