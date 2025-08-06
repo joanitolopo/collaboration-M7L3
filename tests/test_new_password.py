@@ -26,7 +26,9 @@ def test_passwords_are_random():
     Buat tes untuk memastikan dua password yang dibuat berturut-turut tidak sama.
     Hint: Panggil generate_password() dua kali, lalu bandingkan hasilnya.
     """
-    pass
+    password1 = generate_password(12)
+    password2 = generate_password(12)
+    assert password1 != password2, "Password yang dihasilkan tidak acak, keduanya sama."
 
 def test_password_is_not_empty_when_length_positive():
     """
@@ -61,13 +63,16 @@ def test_password_contains_lowercase_letter():
     Buat tes untuk memastikan password mengandung setidaknya satu huruf kecil.
     Hint: Gunakan any(char.islower() for char in password).
     """
-    pass
+    password = generate_password(12)
+    assert any(char.islower() for char in password), "Password harus mengandung setidaknya satu huruf kecil"
 
 def test_password_contains_digit():
     """
     Buat tes untuk memastikan password mengandung setidaknya satu digit (angka).
     Hint: Gunakan any(char.isdigit() for char in password).
     """
+    password = generate_password()
+    assert any(char.isdigit() for char in password)
     pass
 
 def test_password_contains_symbol():
@@ -75,4 +80,6 @@ def test_password_contains_symbol():
     Buat tes untuk memastikan password mengandung setidaknya satu simbol (karakter spesial).
     Hint: Gunakan any(char in string.punctuation for char in password).
     """
+    password = generate_password()
+    assert any(char in string.punctuation for char in password)
     pass
