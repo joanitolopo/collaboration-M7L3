@@ -6,3 +6,4 @@ Sebelum push ke GitHub, pastikan kamu sudah tarik update dari main:
 
 Baru setelah itu:
 - git push origin nama-branch-kamu
+testing bisa ga
