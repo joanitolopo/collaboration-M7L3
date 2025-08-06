@@ -61,7 +61,8 @@ def test_password_contains_lowercase_letter():
     Buat tes untuk memastikan password mengandung setidaknya satu huruf kecil.
     Hint: Gunakan any(char.islower() for char in password).
     """
-    pass
+    password = generate_password(12)
+    assert any(char.islower() for char in password), "Password harus mengandung setidaknya satu huruf kecil"
 
 def test_password_contains_digit():
     """
