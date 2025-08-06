@@ -26,7 +26,9 @@ def test_passwords_are_random():
     Buat tes untuk memastikan dua password yang dibuat berturut-turut tidak sama.
     Hint: Panggil generate_password() dua kali, lalu bandingkan hasilnya.
     """
-    pass
+    password1 = generate_password(12)
+    password2 = generate_password(12)
+    assert password1 != password2, "Password yang dihasilkan tidak acak, keduanya sama."
 
 def test_password_is_not_empty_when_length_positive():
     """
