@@ -56,7 +56,14 @@ def test_password_contains_uppercase_letter():
     Buat tes untuk memastikan password mengandung setidaknya satu huruf kapital.
     Hint: Gunakan any(char.isupper() for char in password).
     """
-    pass
+    # Contoh password yang valid (mengandung huruf kapital)
+    password_valid = "Password123"
+    assert any(char.isupper() for char in password_valid) == True, "Password harus mengandung minimal satu huruf kapital"
+    
+    # Contoh password yang tidak valid (tidak mengandung huruf kapital)
+    password_invalid = "password123"
+    assert any(char.isupper() for char in password_invalid) == False, "Password tidak mengandung huruf kapital"
+
 
 def test_password_contains_lowercase_letter():
     """
