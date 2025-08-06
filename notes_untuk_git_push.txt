@@ -1,0 +1,8 @@
+Sebelum push ke GitHub, pastikan kamu sudah tarik update dari main:
+- git checkout main
+- git pull origin main
+- git checkout nama-branch-kamu
+- git merge main
+
+Baru setelah itu:
+- git push origin nama-branch-kamu
