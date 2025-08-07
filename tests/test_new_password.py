@@ -19,7 +19,10 @@ def test_password_length_matches_input():
     Buat tes untuk memastikan panjang password sesuai dengan input.
     Hint: Gunakan len(password) dan bandingkan dengan panjang yang diminta.
     """
-    pass
+    length = 15
+    password = generate_password(15)
+    new_length = len(password)
+    assert new_length == length
 
 def test_passwords_are_random():
     """
